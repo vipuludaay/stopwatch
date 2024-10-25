@@ -6,6 +6,8 @@ void main() {
 }
 
 class StopwatchApp extends StatelessWidget {
+  const StopwatchApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class StopwatchApp extends StatelessWidget {
 }
 
 class StopwatchHomePage extends StatefulWidget {
+  const StopwatchHomePage({super.key});
+
   @override
   _StopwatchHomePageState createState() => _StopwatchHomePageState();
 }
@@ -28,7 +32,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
   late Timer _timer;
 
   String _formattedTime = '00:00:00';
-  bool _isStopped = true;
+  bool _isStopped = false;
 
   @override
   void initState() {
