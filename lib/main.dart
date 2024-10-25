@@ -59,6 +59,9 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
   }
 
   void _startStopwatch() {
+    if (_stopwatch.isRunning) {
+      return;
+    }
     setState(() {
       _stopwatch.start();
       _isStopped = false;
@@ -66,6 +69,9 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
   }
 
   void _stopOrResetStopwatch() {
+    if (_formattedTime == '00:00:00') {
+      return;
+    }
     if (_isStopped) {
       _stopwatch.reset();
       _formattedTime = '00:00:00';
