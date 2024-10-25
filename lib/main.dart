@@ -91,12 +91,70 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
               ),
             ),
             SizedBox(height: 0.0),
-            Text(
-              _formattedTime,
-              style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                // Hours
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 50,
+                      child: Text(
+                        _formattedTime.split(':')[0],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    Text(
+                      ':',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ],
+                ),
+                // Minutes
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 50,
+                      child: Text(
+                        _formattedTime.split(':')[1],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    Text(
+                      ':',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ],
+                ),
+                // Seconds
+                SizedBox(
+                  width: 50,
+                  child: Text(
+                    _formattedTime.split(':')[2],
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 0.0),
             Row(
