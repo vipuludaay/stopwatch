@@ -94,13 +94,6 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Stopwatch',
-              style: TextStyle(
-                fontSize: 24.0,
-              ),
-            ),
-            SizedBox(height: 0.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
