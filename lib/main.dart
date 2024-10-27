@@ -102,7 +102,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 35,
+                      width: 40,
                       child: Text(
                         _formattedTime.split(':')[0],
                         textAlign: TextAlign.center,
@@ -126,7 +126,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 35,
+                      width: 40,
                       child: Text(
                         _formattedTime.split(':')[1],
                         textAlign: TextAlign.center,
@@ -147,7 +147,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                 ),
                 // Seconds
                 SizedBox(
-                  width: 35,
+                  width: 40,
                   child: Text(
                     _formattedTime.split(':')[2],
                     textAlign: TextAlign.center,
@@ -182,7 +182,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                   onPressed: _stopOrResetStopwatch,
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.green, // Text color
+                    backgroundColor: Color(0xCADF5252), // Text color
                     shadowColor: Colors.grey, // Shadow color
                     elevation: 5,
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
