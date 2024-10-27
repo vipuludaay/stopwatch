@@ -3,8 +3,8 @@ import FlutterMacOS
 
 class MainFlutterWindow: NSWindow {
   override func awakeFromNib() {
-    let fixedWidth: CGFloat = 190  // Desired width
-    let fixedHeight: CGFloat = 120 // Desired height
+    let fixedWidth: CGFloat = 140  // Desired width
+    let fixedHeight: CGFloat = 110 // Desired height
 
     // Get the main screen’s size, or provide a default if screen is nil
     let screenSize = NSScreen.main?.frame.size ?? NSSize(width: 1540, height: 900)

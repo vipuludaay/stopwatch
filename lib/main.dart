@@ -102,12 +102,12 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 50,
+                      width: 35,
                       child: Text(
                         _formattedTime.split(':')[0],
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 25,
                           fontWeight: FontWeight.bold
                         ),
                       ),
@@ -115,7 +115,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                     Text(
                       ':',
                       style: TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 25,
                         fontWeight: FontWeight.bold
                       ),
                     ),
@@ -126,12 +126,12 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 50,
+                      width: 35,
                       child: Text(
                         _formattedTime.split(':')[1],
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 25,
                           fontWeight: FontWeight.bold
                         ),
                       ),
@@ -139,7 +139,7 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                     Text(
                       ':',
                       style: TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 25,
                         fontWeight: FontWeight.bold
                       ),
                     ),
@@ -147,12 +147,12 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
                 ),
                 // Seconds
                 SizedBox(
-                  width: 50,
+                  width: 35,
                   child: Text(
                     _formattedTime.split(':')[2],
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 25,
                       fontWeight: FontWeight.bold
                     ),
                   ),
@@ -165,11 +165,31 @@ class _StopwatchHomePageState extends State<StopwatchHomePage> {
               children: <Widget>[
                 ElevatedButton(
                   onPressed: _startStopwatch,
-                  child: Text('Start'),
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.green, // Text color
+                    shadowColor: Colors.grey, // Shadow color
+                    elevation: 5,
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Text('Start')
                 ),
                 SizedBox(width: 10.0),
                 ElevatedButton(
                   onPressed: _stopOrResetStopwatch,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.green, // Text color
+                    shadowColor: Colors.grey, // Shadow color
+                    elevation: 5,
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
                   child: Text(_isStopped ? 'Reset' : 'Stop'),
                 ),
               ],
